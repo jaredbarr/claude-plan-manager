@@ -52,6 +52,20 @@ Move the Nth most recent plan into `~/.claude/plans/archive/` (creating the dir 
 
 Show the path to the most recently modified plan only. Useful for piping into other tools.
 
+## `rename-all`
+
+One-shot backfill: rename **every** un-prefixed plan in `~/.claude/plans/` to the `YYYY-MM-DD-HHMM-{slug}.md` convention, using the same logic as the auto-rename hook. Files already matching the prefix are skipped (idempotent).
+
+To run it, locate the plugin's rename script and invoke it with the `all` argument:
+
+```bash
+script=$(find ~/.claude/plugins -type f -name rename-plan.sh -path '*plan-manager*' 2>/dev/null | head -1)
+[[ -z "$script" ]] && { echo "rename-plan.sh not found in plugin install"; exit 1; }
+bash "$script" all
+```
+
+Show the script's output verbatim so the user sees each rename. Do not pre-summarise or filter the lines.
+
 ## Anything else
 
 Print a short usage hint listing the subcommands above. Do not guess.
