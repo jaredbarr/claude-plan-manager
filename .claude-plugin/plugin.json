@@ -1,0 +1,9 @@
+{
+  "name": "plan-manager",
+  "version": "0.1.0",
+  "description": "Auto-renames Claude Code plan files to YYYY-MM-DD-HHMM-{slug}.md on ExitPlanMode and adds a /plans command for browsing, opening, searching, and archiving plans.",
+  "author": "Jared Barr",
+  "homepage": "https://github.com/jaredbarr/claude-plan-manager",
+  "license": "MIT",
+  "keywords": ["plans", "plan-mode", "organization", "productivity"]
+}
