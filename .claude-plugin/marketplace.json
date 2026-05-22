@@ -1,0 +1,13 @@
+{
+  "name": "jared-plugins",
+  "owner": {
+    "name": "Jared Barr"
+  },
+  "plugins": [
+    {
+      "name": "plan-manager",
+      "source": "./",
+      "description": "Rename Claude Code plan files with date prefixes and browse them via /plans."
+    }
+  ]
+}
